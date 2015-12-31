@@ -111,9 +111,7 @@
 
 			var printError = function($input) {
 				var klass = $input.attr('class');
-
 				var value = $input.val();
-
 
 				var test = validate(klass, value);
 
@@ -126,7 +124,6 @@
 
 					$error.insertAfter($input);
 				}
-				
 			};
 
 			$inputs.keyup(function() {
