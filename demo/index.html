@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+  	<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+	<div class="wrapper">	
+
+	<h3>My Lovely Form</h3>
+
+		<form class="form-horizontal" id="my-form">
+      <div class="form-group">
+        <label for="username160556" class="control-label col-sm-4">Username</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control username required" name="username" id="username160556" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password403134" class="control-label col-sm-4">Password</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control required password" name="password" id="password403134" type="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword758727" class="control-label col-sm-4">Confirm Password</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control confirmPassword required" name="confirmPassword" id="confirmPassword758727" type="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email891073" class="control-label col-sm-4">Email</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control email required" name="email" id="email891073" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstName771436" class="control-label col-sm-4">First Name</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control firstName" name="firstName" id="firstName771436" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName874354" class="control-label col-sm-4">Last Name</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control lastName" name="lastName" id="lastName874354" type="text">
+        
+        
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber890185" class="control-label col-sm-4">Phone Number</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control required phoneNumber" name="phoneNumber" id="phoneNumber890185" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age132236" class="control-label col-sm-4">Age</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control age required" name="age" id="age132236" type="text">
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label class="control-label col-sm-4">Gender</label>
+        <div class="col-sm-8">
+          <span class="radio-inline">
+            <input value="Unknown" name="gender" type="radio">
+            <span>Unknown</span>
+          </span>
+          <span class="radio-inline">
+            <input checked="checked" value="Male" name="gender" type="radio">
+            <span>Male</span>
+          </span>
+          <span class="radio-inline">
+            <input value="Female" name="gender" type="radio">
+            <span>Female</span>
+          </span>
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="address793275" class="control-label col-sm-4">Address</label>
+        <div class="col-sm-8">
+        <input placeholder="" class="form-control address" name="address" id="address793275" type="text">
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label class="control-label col-sm-4">Country</label>
+        <div class="col-sm-8">
+        <select class="form-control">
+        <option selected="selected" value="vn">Vietnam</option>
+        <option value="us">United State</option>
+        <option value="jp">Japan</option>
+        </select>
+        </div>
+      </div> -->
+      <!-- <div class="form-group"> -->
+        <!-- <label for="intro483118" class="control-label col-sm-4">Your Introduction</label>
+        <div class="col-sm-8"> -->
+        <!-- <textarea type="text" placeholder="" rows="5" class="form-control introduction" id="intro483118">
+          
+        </textarea> -->
+        <!-- </div> -->
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-8">
+          <div class="checkbox">
+            <label>
+              <input value="agree" class="required" name="agreeTerms" id="agreeTerms289928" type="checkbox">
+              <span>I have read and agree to the Terms &amp; Conditions</span>
+
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    
+  </form>
+
+  
+</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  	<script src="jquery.boilerplate.js"></script>
+		<script>
+			// $(function() {
+			// 	$("#element").defaultPluginName({
+			// 		propertyName: "a custom value"
+			// 	});
+			// });
+			$('#my-form').quickValidate();
+			alert('no error');
+		</script>
+	</body>
+</html>
+
