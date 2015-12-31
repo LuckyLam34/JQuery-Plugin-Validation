@@ -83,11 +83,12 @@
 							},
 							age: {
 								regex: /^\d{1,2}$/,
-								error: 'Invalid age'
+								error: 'Invalid age (You must be 16 or older)',
+								min: 16
 							},
 							address: {
-								max: 100,
-								error: 'Must be lesser than 100 characters long'
+								max: 120,
+								error: 'Must be lesser than 120 characters long'
 							}
 						};
 
@@ -103,9 +104,29 @@
 									var regex = new RegExp(f);
 
 									if (regex.test(klass)) {
-										if (value && !filters[f].regex.test(value)) {
-											error = filters[f].error;
-											isValid = false;
+
+										if(filters[f].regex) {
+
+											if (value && !filters[f].regex.test(value)) {
+												error = filters[f].error;
+												isValid = false;
+											}
+										}
+
+										if(filters[f].max) {
+
+											if (value.length > filters[f].max) {
+												error = filters[f].error;
+												isValid = false;
+											}
+										}
+
+										if(filters[f].min) {
+
+											if (parseInt(value, 10) < filters[f].min) {
+												error = filters[f].error;
+												isValid = false;
+											}
 										}
 
 										break;
@@ -122,6 +143,7 @@
 						var printError = function($input) {
 							var klass = $input.attr('class');
 							var value = $input.val();
+
 
 							var test = validate(klass, value);
 
@@ -149,7 +171,13 @@
 									printError($(this));
 								}
 							});
-							
+						
+
+							if (!$('#agreeTerms').prop('checked')) {
+								alert('Please check Terms and Conditions');
+								return false;
+							}
+
 							if ($($form.element).find('input.invalid').length) {
 								e.preventDefault();
 
